@@ -2,34 +2,36 @@ import Image from "next/image";
 import Link from "next/link";
 import { ProjectsSection } from "@/components/Card";
 import SkillsBubble from "@/components/Skillsbubble";
+import ProjectCarousel from "@/components/ProjectCarousel";
+import GitHubProjects from "@/components/GitHubProjects";
 import { features } from "process";
 import { projects } from "../data/project";
 
 export default function Home() {
   // Project data - you can add more projects here
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen text-white">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 section-divider section-band">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+          <div className="text-center glass-panel rounded-[2rem] px-6 py-16 md:px-12">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-in">
               Bienvenue sur mon{" "}
-              <span className="text-blue-600">Portfolio</span>
+              <span className="text-blue-300">Portfolio</span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Je suis Harvey Mouloundou, développeur Full Stack passionné par la création 
               d'applications web modernes et d'expériences utilisateur exceptionnelles.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/Resume"
-                className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors"
+                className="inline-flex items-center px-8 py-3 border border-white/10 text-base font-medium rounded-md text-white bg-white/10 hover:bg-white/15 transition-colors animate-slide-up glass-surface"
               >
                 Voir mon CV
               </Link>
               <Link
                 href="/contact"
-                className="inline-flex items-center px-8 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors"
+                className="inline-flex items-center px-8 py-3 border border-white/10 text-base font-medium rounded-md text-gray-100 bg-white/10 hover:bg-white/15 transition-colors animate-slide-up glass-surface"
               >
                 Me contacter
               </Link>
@@ -38,11 +40,30 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Project Carousel */}
+      <section className="py-12 px-4 sm:px-6 lg:px-8 section-divider section-band">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-white mb-8 text-center animate-fade-in">
+            Projets en vedette
+          </h2>
+          <ProjectCarousel projects={projects} />
+        </div>
+      </section>
+
       {/* Projects Section */}
-      <ProjectsSection projects={projects} />
+      <div className="section-divider">
+        <ProjectsSection projects={projects} />
+      </div>
+
+      {/* GitHub Projects */}
+      <div className="section-divider">
+        <GitHubProjects />
+      </div>
 
       {/* Skills Preview Section */}
-      <SkillsBubble />
+      <div className="section-divider">
+        <SkillsBubble />
+      </div>
     </div>
   );
 }

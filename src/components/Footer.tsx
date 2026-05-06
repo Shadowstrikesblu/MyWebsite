@@ -5,7 +5,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="glass-panel text-white mt-16">
       <div className="max-w-6xl mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* About Section */}
@@ -51,7 +51,7 @@ export default function Footer() {
             </div>
           </div>
 
-           <div>
+           <div className="glass-surface rounded-2xl p-5">
             <h3 className="text-lg font-semibold mb-4">Coordonnées</h3>
             <ul className="space-y-2">
               <li>
@@ -70,7 +70,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Section */}
-        <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-white/10 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center space-x-3">
             <p className="text-gray-400 text-sm">
               © {currentYear} Harvey Mouloundou. Tous droits réservés.

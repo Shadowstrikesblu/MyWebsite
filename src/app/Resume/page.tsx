@@ -10,10 +10,10 @@ export const metadata: Metadata = {
 
 export default function ResumePage() {
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
+    <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8 text-white">
+      <div className="max-w-4xl mx-auto glass-panel rounded-[2rem] overflow-hidden">
         {/* Header Section */}
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 px-8 py-12 text-white">
+        <div className="bg-gradient-to-r from-slate-950 via-slate-900 to-slate-800 px-8 py-12 text-white border-b border-white/10">
           <div className="text-center">
             <h1 className="text-4xl font-bold mb-2">{PERSONAL_INFO.name}</h1>
             <p className="text-xl opacity-90 mb-4">{PERSONAL_INFO.title}</p>
@@ -43,36 +43,36 @@ export default function ResumePage() {
 
         <div className="px-8 py-8">
           {/* Summary Section */}
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-blue-500 pb-2">
+          <section className="mb-8 section-divider">
+            <h2 className="text-2xl font-bold text-white mb-4 border-b border-white/15 pb-2">
               Objectif
             </h2>
-            <p className="text-gray-600 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed">
               {PROFESSIONAL_SUMMARY}
             </p>
           </section>
 
           {/* Skills Section */}
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-blue-500 pb-2">
+          <section className="mb-8 section-divider">
+            <h2 className="text-2xl font-bold text-white mb-4 border-b border-white/15 pb-2">
               Compétences
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <h3 className="font-semibold text-gray-700 mb-2">Hard Skills</h3>
+                <h3 className="font-semibold text-gray-200 mb-2">Hard Skills</h3>
                 <div className="flex flex-wrap gap-2">
                   {SKILLS.frontend.map((skill) => (
-                    <span key={skill} className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">
+                    <span key={skill} className="px-3 py-1 bg-white/10 text-blue-100 rounded-full text-sm border border-white/10">
                       {skill}
                     </span>
                   ))}
                 </div>
               </div>
               <div>
-                <h3 className="font-semibold text-gray-700 mb-2">Soft Skills</h3>
+                <h3 className="font-semibold text-gray-200 mb-2">Soft Skills</h3>
                 <div className="flex flex-wrap gap-2">
                   {SKILLS.backend.map((skill) => (
-                    <span key={skill} className="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">
+                    <span key={skill} className="px-3 py-1 bg-white/10 text-emerald-100 rounded-full text-sm border border-white/10">
                       {skill}
                     </span>
                   ))}
@@ -82,20 +82,20 @@ export default function ResumePage() {
           </section>
 
           {/* Experience Section */}
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-blue-500 pb-2">
+          <section className="mb-8 section-divider">
+            <h2 className="text-2xl font-bold text-white mb-4 border-b border-white/15 pb-2">
               Expériences professionnelles
             </h2>
             
             <div className="space-y-6">
               {WORK_EXPERIENCE.map((job, index) => (
-                <div key={index} className="border-l-4 border-blue-500 pl-6">
+                <div key={index} className="border-l-4 border-blue-400 pl-6">
                   <div className="flex flex-col md:flex-row md:justify-between mb-2">
-                    <h3 className="text-xl font-semibold text-gray-800">{job.title}</h3>
-                    <span className="text-gray-600 font-medium">{job.period}</span>
+                    <h3 className="text-xl font-semibold text-white">{job.title}</h3>
+                    <span className="text-gray-300 font-medium">{job.period}</span>
                   </div>
-                  <p className="text-blue-600 font-medium mb-3">{job.company}</p>
-                  <ul className="text-gray-600 space-y-1 list-disc list-inside">
+                  <p className="text-blue-200 font-medium mb-3">{job.company}</p>
+                  <ul className="text-gray-300 space-y-1 list-disc list-inside">
                     {job.responsibilities.map((responsibility, idx) => (
                       <li key={idx}>{responsibility}</li>
                     ))}
@@ -106,20 +106,20 @@ export default function ResumePage() {
           </section>
 
           {/* Education Section */}
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-blue-500 pb-2">
+          <section className="mb-8 section-divider">
+            <h2 className="text-2xl font-bold text-white mb-4 border-b border-white/15 pb-2">
               Education
             </h2>
             
             <div className="space-y-6">
               {Education.map((edu, index) => (
-                <div key={index} className="border-l-4 border-blue-500 pl-6">
+                <div key={index} className="border-l-4 border-blue-400 pl-6">
                   <div className="flex flex-col md:flex-row md:justify-between mb-2">
-                    <h3 className="text-xl font-semibold text-gray-800">{edu.degree}</h3>
-                    <span className="text-gray-600 font-medium">{edu.period}</span>
+                    <h3 className="text-xl font-semibold text-white">{edu.degree}</h3>
+                    <span className="text-gray-300 font-medium">{edu.period}</span>
                   </div>
-                  <p className="text-blue-600 font-medium mb-3">{edu.institution}</p>
-                  <ul className="text-gray-600 space-y-1 list-disc list-inside">
+                  <p className="text-blue-200 font-medium mb-3">{edu.institution}</p>
+                  <ul className="text-gray-300 space-y-1 list-disc list-inside">
                     {edu.content.map((item, idx) => (
                       <li key={idx}>{item}</li>
                     ))}
@@ -130,24 +130,24 @@ export default function ResumePage() {
           </section>
 
           {/* Projects Section */}
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-blue-500 pb-2">
+          <section className="mb-8 section-divider section-band">
+            <h2 className="text-2xl font-bold text-white mb-4 border-b border-white/15 pb-2">
               Projets Personnels
             </h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {PROJECTS.map((project, index) => (
-                <div key={index} className="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
-                  <h3 className="text-lg font-semibold text-gray-800 mb-2">{project.name}</h3>
-                  <p className="text-gray-600 mb-3">{project.description}</p>
+                <div key={index} className="glass-surface rounded-2xl p-6 hover:shadow-md transition-shadow">
+                  <h3 className="text-lg font-semibold text-white mb-2">{project.name}</h3>
+                  <p className="text-gray-300 mb-3">{project.description}</p>
                   <div className="flex flex-wrap gap-2 mb-3">
                     {project.technologies.map((tech) => (
-                      <span key={tech} className="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">
+                      <span key={tech} className="px-2 py-1 bg-white/10 text-gray-200 rounded text-xs border border-white/10">
                         {tech}
                       </span>
                     ))}
                   </div>
-                  <a href={project.link} className="text-blue-600 hover:text-blue-800 text-sm font-medium">
+                  <a href={project.link} className="text-blue-300 hover:text-blue-200 text-sm font-medium">
                     View Project →
                   </a>
                 </div>
@@ -156,14 +156,14 @@ export default function ResumePage() {
           </section>
         </div>
 
-        <div className="bg-gray-50 px-8 py-6 text-center">
-          <p className="text-gray-600">
+        <div className="bg-black/20 px-8 py-6 text-center border-t border-white/10">
+          <p className="text-gray-300">
             <a 
               href="/HARVEY KERETH MOULOUNDOU.pdf" 
               download="HARVEY KERETH MOULOUNDOU.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
+              className="inline-flex items-center px-6 py-3 bg-white/10 text-white rounded-lg hover:bg-white/15 transition-colors font-medium border border-white/10"
             >
               <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />

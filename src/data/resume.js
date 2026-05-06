@@ -2,86 +2,102 @@
 
 // Personal Information Constants
 export const PERSONAL_INFO = {
-  name: 'Harvey Mouloundou',
-  title: 'Full Stack Developer',
-  email: 'hmoulk8@gmail.com',
-  location: 'Paris, France',
-  phone: '+33768727043',
+  name: 'Harvey Kereth MOULOUNDOU',
+  title: 'Développeur Angular',
+  email: 'moulou_h@etna-alternance.net',
+  location: 'Sèvres, France',
+  phone: '+33 7 68 72 70 43',
 };
 
 // Professional Summary
-export const PROFESSIONAL_SUMMARY = `Détenteur d’un diplôme Master 2 CYBER , je suis à la recherche d’un poste de web développer dans
-une entreprise ouverte au développement des outils informatiques en ligne avec ma formation. Je
-suis motivé et déterminé à relever des défis complexes à même de produire des résultats dignes
-d’intérêt pour l’entreprise.`;
+export const PROFESSIONAL_SUMMARY = `Étudiant en Master 1 Cloud DevOps à l'École des Technologies Numériques Avancées et détenteur d'un diplôme de Master 2 CYBER à l'institut Catholique de Lille, je recherche une alternance en Développement Web avec Angular.`;
 
 export const SKILLS = {
-  frontend: ['Maitrise de Framework JS(React,Vue,Next)', 'Programmation en JavaScript, Python, PHP, C++ et C#',
-     'Maitrise des technologies de Base de données avec MySQL',
-      'Connaissances en Cloud', 'Développement mobile ', 
-      'Analyse de données avec Python ou R', 'Game Developer avec Unity'],
-  backend: ['Travail en autonomie', 'A l’aise avec les langues', 
-    'Inventif', 'Travail en équipe', 
-    'Design Pattern', 'Connaissances en Cybersécurité'],
+  frontend: ['ReactJS', 'VueJS', 'TypeScript', 'JavaScript', 'Python', 'PHP', 'C#', 'MySQL', 'Angular'],
+  backend: [
+    'DevOps & Cloud: VPS (Windows/IIS), AWS, déploiement applicatif',
+    'Tests & Qualité: Jest, Cypress, Postman',
+    'DevSecOps: Burp Suite, ZAP, analyse de vulnérabilités',
+    'Backend: .NET, NodeJS, Java, Ruby (FAVEOD)',
+    'CI/CD: IIS, intégration APIs, déploiement VPS'
+  ],
+  softSkills: ['Travail en autonomie', 'À l\'aise avec les langues', 'Inventif & créatif', 'Curiosité technique', 'Sens du service'],
+  languages: ['Français (Langue maternelle)', 'Anglais (C1)', 'Allemand (B1)']
 };
 
 // Skills Data
 
-export const Education = [{
-  degree: 'Master 2 CYBER',
-  institution: 'Campus Euratechnologies',
-  period: '2023 - 2025',
-  content: ['Création d\'applications mobiles avec Expo Go et Android Studio, Développement web avec React et Node.js',
-            'Formation en cybersécurité et protection des données',
-            'Projet de fin d\'études: Mémoire sur l\'utilisation des données personnelles dans les publicités et jeu vidéo réalisé avec Unity',
-            'Expérience en Ethical Hacking à l\'aide des plateformes Cisco et Tryhackme',]
+export const Education = [
+{
+  degree: 'Master 1 Cloud DevOps',
+  institution: 'ETNA – École des Technologies Numériques Avancées',
+  period: '2026 – 2028',
+  content: []
 },
 {
-  degree: 'Licence de sciences du numérique',
+  degree: 'Master 2 Cybersécurité – Campus EuraTechnologies',
   institution: 'Institut Catholique de Lille',
-  period: '2019 - 2022',
-  content: ['Développement web full-stack avec HTML, CSS, JavaScript, PHP, MySQL',
-            'Introduction aux algorithmes et structures de données',
-            'Projets pratiques incluant la création de sites web et d\'applications simples',
-            'Travail en équipe sur des projets de développement logiciel',
-  ]
+  period: '2022 – 2024',
+  content: []
 },
 {
-  degree: 'Baccalauréat Scientifique',
-  institution: 'Lycée Dominique Savio',
-  period: '2016 - 2019',
-  content: ['Section européenne', 'Mention Assez Bien', 'Spécialité Mathématiques', 'Informatique et Création Numérique',
-  ]
+  degree: 'Licence 3 Sciences du Numérique',
+  institution: 'Institut Catholique de Lille',
+  period: '2019 – 2022',
+  content: []
 }
 ];
 export const WORK_EXPERIENCE = [
   {
-    title: 'Consultant développeur junior',
-    company: 'IPASYS',
-    period: 'Du 13 Février 2025 au 22 Juin 2025',
+    title: 'Ingénieur DevOps',
+    company: 'Congo Digital (pour WYMEE, France)',
+    period: 'Septembre 2025 – Mars 2026',
     responsibilities: [
-      'Création et maintenance de site web en RUBY grâce à la technologie FAVEOD Designer',
+      'Déploiement d\'applications backend .NET et frontend NodeJS sur VPS Windows via IIS',
+      'Mise en place de tests automatisés (Jest, Cypress) et tests API (Postman)',
+      'Tests de sécurité (Burp Suite, ZAP)',
+      'Maintenance, supervision et optimisation des performances applicatives',
+      'Supervision, maintenance et suivi de l\'environnement',
     ],
   },
   {
-    title: 'Cybersecurity Data Analyst Intern',
-    company: 'Schneider Electric',
-    period: 'Du 30 Octobre 2023 au 6 Septembre 2024',
+    title: 'Consultant Dev Junior',
+    company: 'IPASYS, Garches (France)',
+    period: 'Février 2025 – Juin 2025',
     responsibilities: [
-      'Création de scripts de détection de machines Schneider Electric connectées à Internet.',
-      'Création et gestion d’espaces de stockage de données',
-      'Analyse complexe d’informations',
+      'Création et maintenance de sites web en Ruby via la technologie FAVEOD Designer',
+      'Support applicatif et amélioration continue des solutions développées',
     ],
   },
   {
     title: 'Développeur Web',
-    company: 'Wymee',
-    period: 'Du 13 Septembre 2021 au 30 avril 2023',
+    company: 'WYMEE, Reims',
+    period: '2021 – 2023',
     responsibilities: [
-      'Recherches sur les technologies de parseur de CV, particulièrement en langage Java',
-      'Création des sites web offrant des facilités sur l’affichage et la compréhension des fichiers JSON, en utilisant les technologies Vue.js et Adonis avec un Backend Java.',
-      'Utilisation de différentes technologies Cloud pour héberger un site tels que les Virtual Private Servers (VPS)',
-      'Utilisation d’APIs.',
+      'Recherche et développement d\'un parseur de CV en Java',
+      'Développement full-stack (Backend Java / Adonis – Frontend Vue.js)',
+      'Conception d\'outils de visualisation et traitement de données JSON',
+      'Déploiement sur environnements VPS et intégration d\'APIs',
+      'Participation aux mises en production et maintenance applicative',
+    ],
+  },
+  {
+    title: 'Analyste de données en Cybersécurité (Alternance)',
+    company: 'Schneider Electric',
+    period: '2023 – 2024',
+    responsibilities: [
+      'Développement de scripts de détection de machines exposées sur Internet',
+      'Gestion d\'espaces de stockage de données',
+      'Analyse avancée de données de cybersécurité',
+    ],
+  },
+  {
+    title: 'Stage',
+    company: 'SONEC AFRICA, Abidjan',
+    period: '2021',
+    responsibilities: [
+      'Développement de plateformes collaboratives gouvernementales',
+      'Vérification fonctionnelle d\'un système de gestion des permis de conduire',
     ],
   },
 ];
@@ -89,15 +105,15 @@ export const WORK_EXPERIENCE = [
 // Projects Data
 export const PROJECTS = [
   {
-    name: 'Site Portfolio',
-    description: 'Site qui présente mes compétences, expériences et projets réalisés',
-    technologies: ['React', 'Node.js'],
-    link: '/',
+    name: 'Site web Portfolio',
+    description: 'Site personnel présentant les compétences, expériences et projets',
+    technologies: ['TypeScript', 'OVHCLOUD'],
+    link: 'https://vparfait.com',
   },
   {
-    name: 'Personal Github',
-    description: 'Mon dépôt GitHub personnel où je partage mes projets et contributions open-source',
-    technologies: ['JavaScript', 'Java', 'Vue', 'Expo Go'],
+    name: 'Lecteur musical',
+    description: 'Application de lecture vidéo avec gestion de comptes et système de commentaires',
+    technologies: ['EXPO GO', 'React Native'],
     link: 'https://github.com/Shadowstrikesblu',
   },
 ];

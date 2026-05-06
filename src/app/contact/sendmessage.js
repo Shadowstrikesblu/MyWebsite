@@ -6,7 +6,7 @@ export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState('');
   const [validationErrors, setValidationErrors] = useState({});
-  const namePattern = /^[A-Za-zÀ-ÿ]+\s+[A-Za-zÀ-ÿ]+$/;
+  const namePattern = /^[A-Za-zÀ-ÿ]+(?:[ '\-][A-Za-zÀ-ÿ]+)+$/;
   const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   function validateForm(formData) {
         const errors = {};
@@ -17,7 +17,7 @@ export default function ContactForm() {
         if (!name) {
           errors.name = 'Le nom est requis';
         } else if (!namePattern.test(name)) {
-          errors.name = 'Le nom doit être au format "Prénom Nom" (ex: Jean Dupont)';
+          errors.name = 'Le nom doit contenir au moins deux mots (ex: Jean Dupont ou Nelson Pirres da Silva)';
         }
 
         if (!email) {
@@ -89,17 +89,17 @@ export default function ContactForm() {
 
   if (submitted) {
     return (
-      <div className="max-w-md mx-auto text-center p-6 bg-green-50 rounded-lg border border-green-200">
-        <div className="text-green-600 mb-2">
+      <div className="max-w-md mx-auto text-center p-6 glass-panel rounded-[1.5rem] border border-emerald-400/20">
+        <div className="text-emerald-300 mb-2">
           <svg className="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
           </svg>
         </div>
-        <h3 className="text-lg font-semibold text-green-800 mb-2">Message envoyé!</h3>
-        <p className="text-green-600 mb-4">Merci pour votre message. Je vous répondrai bientôt.</p>
+        <h3 className="text-lg font-semibold text-white mb-2">Message envoyé!</h3>
+        <p className="text-gray-300 mb-4">Merci pour votre message. Je vous répondrai bientôt.</p>
         <button
           onClick={() => setSubmitted(false)}
-          className="text-blue-600 hover:text-blue-800 font-medium"
+          className="text-blue-300 hover:text-blue-200 font-medium"
         >
           Envoyer un autre message
         </button>
@@ -108,33 +108,33 @@ export default function ContactForm() {
   }
 
   return (
-    <div className="bg-white shadow-lg rounded-lg p-8">
+    <div className="glass-panel rounded-[1.5rem] p-8">
     <form onSubmit={handleSubmit} className="max-w-md mx-auto space-y-6" noValidate>
     <div>
-      <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-        Nom complet * <span className="text-gray-500 font-normal">(Prénom Nom)</span>
+      <label htmlFor="name" className="block text-sm font-medium text-white mb-2">
+        Nom complet * <span className="text-gray-400 font-normal">(Prénom Nom)</span>
       </label>
       <input
         type="text"
         name="name"
         id="name"
         required
-        pattern="^[A-Za-zÀ-ÿ]+\s+[A-Za-zÀ-ÿ]+$"
+        pattern="^[A-Za-zÀ-ÿ]+(?:[ '\-][A-Za-zÀ-ÿ]+)+$"
         onBlur={handleBlur}
-        className={`w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 placeholder-gray-500 ${
+        className={`w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 placeholder-gray-400 bg-white/5 text-white ${
           validationErrors.name 
             ? 'border-red-300 focus:ring-red-500 focus:border-red-500' 
-            : 'border-gray-300 focus:ring-blue-500 focus:border-blue-500'
+            : 'border-white/10 focus:ring-blue-400 focus:border-blue-400'
         }`}
         placeholder="Jean Dupont"
       />
       {validationErrors.name && (
-        <p className="mt-1 text-sm text-red-600">{validationErrors.name}</p>
+        <p className="mt-1 text-sm text-red-300">{validationErrors.name}</p>
       )}
     </div>
 
     <div>
-      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+      <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
         Email *
       </label>
       <input
@@ -144,34 +144,34 @@ export default function ContactForm() {
         required
         pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
         onBlur={handleBlur}
-        className={`w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 placeholder-gray-500 ${
+        className={`w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 placeholder-gray-400 bg-white/5 text-white ${
           validationErrors.email 
             ? 'border-red-300 focus:ring-red-500 focus:border-red-500' 
-            : 'border-gray-300 focus:ring-blue-500 focus:border-blue-500'
+            : 'border-white/10 focus:ring-blue-400 focus:border-blue-400'
         }`}
         placeholder="jean.dupont@example.com"
       />
       {validationErrors.email && (
-        <p className="mt-1 text-sm text-red-600">{validationErrors.email}</p>
+        <p className="mt-1 text-sm text-red-300">{validationErrors.email}</p>
       )}
     </div>
 
     <div>
-      <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
+      <label htmlFor="subject" className="block text-sm font-medium text-white mb-2">
         Sujet
       </label>
       <input
         type="text"
         name="subject"
         id="subject"
-        className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 placeholder-gray-500"
+        className="w-full px-3 py-2 border border-white/10 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400 placeholder-gray-400 bg-white/5 text-white"
         placeholder="Sujet de votre message"
       />
     </div>
 
     <div>
-      <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-        Message * <span className="text-gray-500 font-normal">(min. 10 caractères)</span>
+      <label htmlFor="message" className="block text-sm font-medium text-white mb-2">
+        Message * <span className="text-gray-400 font-normal">(min. 10 caractères)</span>
       </label>
       <textarea
         name="message"
@@ -180,21 +180,21 @@ export default function ContactForm() {
         required
         minLength={10}
         onBlur={handleBlur}
-        className={`w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 resize-vertical placeholder-gray-500 ${
+        className={`w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 resize-vertical placeholder-gray-400 bg-white/5 text-white ${
           validationErrors.message 
             ? 'border-red-300 focus:ring-red-500 focus:border-red-500' 
-            : 'border-gray-300 focus:ring-blue-500 focus:border-blue-500'
+            : 'border-white/10 focus:ring-blue-400 focus:border-blue-400'
         }`}
         placeholder="Écrivez votre message ici... (minimum 10 caractères)"
       />
       {validationErrors.message && (
-        <p className="mt-1 text-sm text-red-600">{validationErrors.message}</p>
+        <p className="mt-1 text-sm text-red-300">{validationErrors.message}</p>
       )}
     </div>
 
     {/* Display general error */}
     {error && (
-      <div className="text-red-600 text-sm bg-red-50 p-3 rounded-md border border-red-200">
+      <div className="text-red-200 text-sm bg-red-500/10 p-3 rounded-md border border-red-400/20">
         {error}
       </div>
     )}
@@ -202,12 +202,12 @@ export default function ContactForm() {
     <button
       type="submit"
       disabled={isSubmitting || Object.keys(validationErrors).some(key => validationErrors[key])}
-      className="w-full bg-blue-600 text-white py-3 px-4 rounded-md font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+      className="w-full bg-white/10 text-white py-3 px-4 rounded-md font-medium hover:bg-white/15 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-transparent disabled:opacity-50 disabled:cursor-not-allowed transition-colors border border-white/10"
     >
       {isSubmitting ? 'Envoi en cours...' : 'Envoyer le message'}
     </button>
 
-    <p className="text-xs text-gray-500 text-center">
+    <p className="text-xs text-gray-400 text-center">
       * Champs obligatoires
     </p>
   </form>
