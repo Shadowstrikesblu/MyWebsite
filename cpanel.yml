@@ -1,0 +1,8 @@
+---
+deployment:
+  targets:
+    public_html:
+      path: /public_html
+      files:
+        - source: /out
+          target: /
