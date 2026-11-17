@@ -29,7 +29,7 @@ export default function AboutPage() {
                 { 
                 <div className="relative w-64 h-64 mx-auto mb-4">
                   <Image
-                    src="/profile.jpg"
+                    src="/profile.webp"
                     alt="Harvey Mouloundou"
                     fill
                     className="rounded-full object-cover shadow-lg"

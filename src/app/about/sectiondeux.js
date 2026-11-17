@@ -25,7 +25,7 @@ export default function SectionDeux() {
                 { 
                 <div className="relative w-64 h-64 mx-auto mb-4">
                     <Image
-                    src="/vc.jpg"
+                    src="/vc.webp"
                     alt="Valentine Charrondière"
                     fill
                     className=""

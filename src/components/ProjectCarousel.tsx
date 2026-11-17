@@ -58,26 +58,26 @@ export default function ProjectCarousel({ projects }: { projects: Project[] }) {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/55 to-black/10"></div>
       </div>
 
       {/* Content */}
-      <div className="absolute inset-0 flex flex-col justify-end p-8 text-white">
+      <div className="absolute inset-0 flex flex-col justify-end p-8 text-white on-image">
         <span className="inline-block w-fit bg-blue-600 text-white px-3 py-1 rounded-full text-sm mb-4">
           {currentProject.category}
         </span>
-        <h3 className="text-3xl font-bold mb-2">{currentProject.title}</h3>
+        <h3 className="text-3xl font-bold mb-2 drop-shadow-lg">{currentProject.title}</h3>
         <p className="text-gray-200 mb-4 max-w-2xl">{currentProject.description}</p>
         <div className="flex flex-wrap gap-2 mb-4">
           {currentProject.technologies.slice(0, 4).map((tech) => (
-            <span key={tech} className="bg-blue-500/80 px-3 py-1 rounded text-sm">
+            <span key={tech} className="bg-white/15 border border-white/30 backdrop-blur-sm px-3 py-1 rounded text-sm">
               {tech}
             </span>
           ))}
         </div>
         <Link
           href={`/Dashboard/projects/${currentProject.slug}`}
-          className="inline-block w-fit px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg font-medium transition-colors"
+          className="btn btn-primary w-fit px-6 py-2"
         >
           Voir plus
         </Link>

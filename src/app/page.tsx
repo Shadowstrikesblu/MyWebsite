@@ -25,13 +25,13 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/Resume"
-                className="inline-flex items-center px-8 py-3 border border-white/10 text-base font-medium rounded-md text-white bg-white/10 hover:bg-white/15 transition-colors animate-slide-up glass-surface"
+                className="btn btn-primary px-8 py-3 text-base animate-slide-up"
               >
                 Voir mon CV
               </Link>
               <Link
                 href="/contact"
-                className="inline-flex items-center px-8 py-3 border border-white/10 text-base font-medium rounded-md text-gray-100 bg-white/10 hover:bg-white/15 transition-colors animate-slide-up glass-surface"
+                className="btn px-8 py-3 text-base animate-slide-up"
               >
                 Me contacter
               </Link>

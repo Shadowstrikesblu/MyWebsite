@@ -27,7 +27,7 @@ export default function MonParcours() {
                 { 
                 <div className="relative w-64 h-64 mx-auto mb-4">
                     <Image
-                    src="/Lycee.png"
+                    src="/Lycee.webp"
                     alt="Dominique Savio"
                     fill
                     className=""

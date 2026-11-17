@@ -1,5 +1,23 @@
 import Link from "next/link";
 
+const SKILL_ICONS: Record<string, string> = {
+  "React": "/icons/react.svg",
+  "Next.js": "/icons/nextjs.svg",
+  "TypeScript": "/icons/typescript.svg",
+  "Node.js": "/icons/nodejs.svg",
+  "Python": "/icons/python.svg",
+  "PostgreSQL": "/icons/postgresql.svg",
+  "MongoDB": "/icons/mongodb.svg",
+  "Tailwind CSS": "/icons/tailwindcss.svg",
+};
+
+function SkillIcon({ skill }: { skill: string }) {
+  const src = SKILL_ICONS[skill];
+  if (!src) return null;
+  // eslint-disable-next-line @next/next/no-img-element
+  return <img src={src} alt="" aria-hidden="true" width={28} height={28} className="w-7 h-7 shrink-0" loading="lazy" />;
+}
+
 interface SkillsBubbleProps {
   skills?: string[];
   showAboutLink?: boolean;
@@ -30,7 +48,8 @@ export default function SkillsBubble({
               key={skill} 
               className="glass-card p-6 rounded-2xl hover:shadow-lg transition-shadow group"
             >
-              <p className="font-semibold text-white group-hover:text-blue-200 transition-colors">
+              <p className="flex items-center justify-center gap-3 font-semibold text-white group-hover:text-blue-200 transition-colors">
+                <SkillIcon skill={skill} />
                 {skill}
               </p>
             </div>
@@ -40,7 +59,7 @@ export default function SkillsBubble({
           <div className="mt-12">
             <Link
               href="/about"
-              className="inline-flex items-center px-6 py-3 border border-white/10 text-base font-medium rounded-md text-white bg-white/10 hover:bg-white/15 transition-colors"
+              className="btn px-6 py-3 text-base"
             >
               En savoir plus sur moi
             </Link>
@@ -55,7 +74,8 @@ export default function SkillsBubble({
 export function SkillBubble({ skill, className = "" }: { skill: string; className?: string }) {
   return (
     <div className={`glass-card p-4 rounded-2xl hover:shadow-lg transition-shadow group ${className}`}>
-      <p className="font-semibold text-white group-hover:text-blue-200 transition-colors text-center">
+      <p className="flex items-center justify-center gap-2 font-semibold text-white group-hover:text-blue-200 transition-colors text-center">
+        <SkillIcon skill={skill} />
         {skill}
       </p>
     </div>

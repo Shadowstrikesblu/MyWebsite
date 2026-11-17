@@ -18,7 +18,10 @@ const Navigation = () => {
   ];
 
   const isActive = (href: string) => {
-    return pathname === href;
+    const normalize = (p: string) => (p.length > 1 ? p.replace(/\/+$/, '') : p).toLowerCase();
+    const current = normalize(pathname || '/');
+    const target = normalize(href);
+    return target === '/' ? current === '/' : current === target || current.startsWith(target + '/');
   };
 
   return (
@@ -41,8 +44,8 @@ const Navigation = () => {
                 href={item.href}
                 className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
                   isActive(item.href)
-                    ? 'text-white bg-white/10 border border-white/10'
-                    : 'text-gray-300 hover:text-white hover:bg-white/10'
+                    ? 'nav-link-active'
+                    : 'text-gray-300 border border-transparent hover:text-white hover:bg-white/10'
                 }`}
               >
                 {item.name}
@@ -109,8 +112,8 @@ const Navigation = () => {
               onClick={() => setIsMenuOpen(false)}
               className={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 ${
                 isActive(item.href)
-                  ? 'text-white bg-white/10 border border-white/10'
-                    : 'text-gray-300 hover:text-white hover:bg-white/10'
+                  ? 'nav-link-active'
+                    : 'text-gray-300 border border-transparent hover:text-white hover:bg-white/10'
               }`}
             >
               {item.name}

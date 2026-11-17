@@ -145,7 +145,7 @@ export default function GitHubProjects() {
           <Link
             href="https://github.com/Shadowstrikesblu"
             target="_blank"
-            className="inline-block px-8 py-3 bg-white/10 hover:bg-white/15 text-white font-medium rounded-lg transition-colors border border-white/10"
+            className="btn px-8 py-3"
           >
             Voir tous mes projets sur GitHub
           </Link>

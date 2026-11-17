@@ -202,7 +202,7 @@ export default function ContactForm() {
     <button
       type="submit"
       disabled={isSubmitting || Object.keys(validationErrors).some(key => validationErrors[key])}
-      className="w-full bg-white/10 text-white py-3 px-4 rounded-md font-medium hover:bg-white/15 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-transparent disabled:opacity-50 disabled:cursor-not-allowed transition-colors border border-white/10"
+      className="btn btn-primary w-full py-3 px-4 focus:outline-none focus:ring-2 focus:ring-blue-400"
     >
       {isSubmitting ? 'Envoi en cours...' : 'Envoyer le message'}
     </button>

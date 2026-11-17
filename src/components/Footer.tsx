@@ -19,7 +19,7 @@ export default function Footer() {
             <div className="flex space-x-4">
               <a 
                 href="mailto:hmoulk8@gmail.com" 
-                className="text-gray-300 hover:text-white transition-colors"
+                className="social-link"
                 aria-label="Email"
               >
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -28,7 +28,7 @@ export default function Footer() {
               </a>
               <a 
                 href="https://linkedin.com/in/harvey-mouloundou" 
-                className="text-gray-300 hover:text-white transition-colors"
+                className="social-link"
                 aria-label="LinkedIn"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -39,7 +39,7 @@ export default function Footer() {
               </a>
               <a 
                 href="https://github.com/Shadowstrikesblu" 
-                className="text-gray-300 hover:text-white transition-colors"
+                className="social-link"
                 aria-label="GitHub"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -53,16 +53,25 @@ export default function Footer() {
 
            <div className="glass-surface rounded-2xl p-5">
             <h3 className="text-lg font-semibold mb-4">Coordonnées</h3>
-            <ul className="space-y-2">
+            <ul className="space-y-3">
               <li>
-                  0768727043
+                <a href="tel:+33768727043" className="text-link">
+                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                  </svg>
+                  07 68 72 70 43
+                </a>
+              </li>
+              <li className="flex items-center gap-2 text-gray-300">
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                  <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                </svg>
+                Paris, France
               </li>
               <li>
-                  Paris,France
-              </li>
-              <li>
-                <Link href="/contact" className="text-gray-300 hover:text-white transition-colors">
-                  Contact
+                <Link href="/contact" className="text-link">
+                  Me contacter
+                  <span aria-hidden="true">→</span>
                 </Link>
               </li>
             </ul>
@@ -85,14 +94,6 @@ export default function Footer() {
                 className="brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
               />
             </div>
-          </div>
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link href="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
-              Politique de confidentialité
-            </Link>
-            <Link href="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
-              Conditions d'utilisation
-            </Link>
           </div>
         </div>
       </div>

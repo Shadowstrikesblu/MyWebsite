@@ -2,102 +2,72 @@
 
 // Personal Information Constants
 export const PERSONAL_INFO = {
-  name: 'Harvey Kereth MOULOUNDOU',
-  title: 'Développeur Angular',
-  email: 'moulou_h@etna-alternance.net',
+  name: 'Harvey MOULOUNDOU',
+  title: 'Ingénieur Informatique junior – Audit & Cybersécurité',
+  objective: 'Recherche : CDI en Audit & Cybersécurité – Disponible immédiatement',
+  email: 'hmoulk8@gmail.com',
   location: 'Sèvres, France',
   phone: '+33 7 68 72 70 43',
 };
 
 // Professional Summary
-export const PROFESSIONAL_SUMMARY = `Étudiant en Master 1 Cloud DevOps à l'École des Technologies Numériques Avancées et détenteur d'un diplôme de Master 2 CYBER à l'institut Catholique de Lille, je recherche une alternance en Développement Web avec Angular.`;
+export const PROFESSIONAL_SUMMARY = `Ingénieur informatique titulaire d'un Master 2 en cybersécurité, avec trois ans d'expérience en développement, mise en production et sécurité applicative (Python, SQL, Windows, Linux). J'ai cartographié des actifs exposés chez Schneider Electric et testé la sécurité d'applications en production. Je recherche un CDI en audit IT et cybersécurité, pour appliquer cette double lecture technique et risque au contrôle interne et à la conformité. Disponible immédiatement.`;
 
 export const SKILLS = {
-  frontend: ['ReactJS', 'VueJS', 'TypeScript', 'JavaScript', 'Python', 'PHP', 'C#', 'MySQL', 'Angular'],
-  backend: [
-    'DevOps & Cloud: VPS (Windows/IIS), AWS, déploiement applicatif',
-    'Tests & Qualité: Jest, Cypress, Postman',
-    'DevSecOps: Burp Suite, ZAP, analyse de vulnérabilités',
-    'Backend: .NET, NodeJS, Java, Ruby (FAVEOD)',
-    'CI/CD: IIS, intégration APIs, déploiement VPS'
-  ],
-  softSkills: ['Travail en autonomie', 'À l\'aise avec les langues', 'Inventif & créatif', 'Curiosité technique', 'Sens du service'],
-  languages: ['Français (Langue maternelle)', 'Anglais (C1)', 'Allemand (B1)']
+  technical: ['Python', 'Bash', 'PowerShell', 'GitLab CI/CD', 'Git', 'SQL', 'Azure', 'AWS', 'Linux', 'Windows Server'],
+  audit: ["Analyse de surface d'exposition", 'Burp Suite', 'OWASP ZAP', 'ISO 27001', 'RGPD', 'Audit SI'],
 };
 
-// Skills Data
-
 export const Education = [
-{
-  degree: 'Master 1 Cloud DevOps',
-  institution: 'ETNA – École des Technologies Numériques Avancées',
-  period: '2026 – 2028',
-  content: []
-},
-{
-  degree: 'Master 2 Cybersécurité – Campus EuraTechnologies',
-  institution: 'Institut Catholique de Lille',
-  period: '2022 – 2024',
-  content: []
-},
-{
-  degree: 'Licence 3 Sciences du Numérique',
-  institution: 'Institut Catholique de Lille',
-  period: '2019 – 2022',
-  content: []
-}
+  {
+    degree: 'Code2Work – Formation DevOps',
+    institution: 'École des Technologies Numériques Avancées',
+    period: 'Mars 2026 – Septembre 2026',
+    content: [],
+  },
+  {
+    degree: 'Master 2 Informatique – Parcours Ingénierie des Réseaux, Communication & Sécurité',
+    institution: 'Institut Catholique de Lille',
+    period: 'Septembre 2025 – Avril 2026',
+    content: [],
+  },
+  {
+    degree: 'Licence 3 Informatique – Sciences du Numérique',
+    institution: 'Institut Catholique de Lille',
+    period: 'Septembre 2019 – Avril 2022',
+    content: [],
+  },
 ];
+
 export const WORK_EXPERIENCE = [
   {
     title: 'Ingénieur DevOps',
-    company: 'Congo Digital (pour WYMEE, France)',
+    company: 'Congo Digital, France',
     period: 'Septembre 2025 – Mars 2026',
     responsibilities: [
-      'Déploiement d\'applications backend .NET et frontend NodeJS sur VPS Windows via IIS',
-      'Mise en place de tests automatisés (Jest, Cypress) et tests API (Postman)',
-      'Tests de sécurité (Burp Suite, ZAP)',
-      'Maintenance, supervision et optimisation des performances applicatives',
-      'Supervision, maintenance et suivi de l\'environnement',
+      'Évaluation de la sécurité applicative (OWASP ZAP, Burp Suite) : toutes les vulnérabilités détectées par ZAP ont été corrigées.',
+      'Mise en production et maintenance de 2 applications (back-end .NET ; front-end Node.js) sur Windows / IIS.',
+      'Pipelines CI/CD permettant un déploiement quasi instantané des mises à jour, avec traçabilité des changements.',
+      "Diagnostic d'incidents de production à partir de l'analyse des logs.",
     ],
   },
   {
-    title: 'Consultant Dev Junior',
-    company: 'IPASYS, Garches (France)',
-    period: 'Février 2025 – Juin 2025',
+    title: 'Analyste Cybersécurité & Données',
+    company: 'Schneider Electric, Lille – Alternance',
+    period: 'Octobre 2023 – Septembre 2024',
     responsibilities: [
-      'Création et maintenance de sites web en Ruby via la technologie FAVEOD Designer',
-      'Support applicatif et amélioration continue des solutions développées',
+      'Script Python de détection hebdomadaire des actifs exposés sur Internet, révélant plusieurs dizaines de machines exposées chaque semaine.',
+      'Contrôle manuel systématique des résultats du script avant remontée des constats.',
+      "Analyse de données de sécurité (Pandas, NumPy) et suivi de l'inventaire des assets.",
+      'Documentation des constats et contribution au plan de remédiation.',
     ],
   },
   {
-    title: 'Développeur Web',
-    company: 'WYMEE, Reims',
-    period: '2021 – 2023',
+    title: 'Développeur Full Stack',
+    company: 'Wymee, Reims – Alternance',
+    period: 'Septembre 2021 – Avril 2023',
     responsibilities: [
-      'Recherche et développement d\'un parseur de CV en Java',
-      'Développement full-stack (Backend Java / Adonis – Frontend Vue.js)',
-      'Conception d\'outils de visualisation et traitement de données JSON',
-      'Déploiement sur environnements VPS et intégration d\'APIs',
-      'Participation aux mises en production et maintenance applicative',
-    ],
-  },
-  {
-    title: 'Analyste de données en Cybersécurité (Alternance)',
-    company: 'Schneider Electric',
-    period: '2023 – 2024',
-    responsibilities: [
-      'Développement de scripts de détection de machines exposées sur Internet',
-      'Gestion d\'espaces de stockage de données',
-      'Analyse avancée de données de cybersécurité',
-    ],
-  },
-  {
-    title: 'Stage',
-    company: 'SONEC AFRICA, Abidjan',
-    period: '2021',
-    responsibilities: [
-      'Développement de plateformes collaboratives gouvernementales',
-      'Vérification fonctionnelle d\'un système de gestion des permis de conduire',
+      "Développement Full-Stack (Java, Vue.js), conception d'APIs REST, déploiement sur VPS Linux.",
     ],
   },
 ];
